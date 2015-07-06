@@ -178,6 +178,14 @@ public class ZreInterface
         return agent.getIdentity();
     }
 
+    /**
+     * @return This node's IP address
+     */
+    public String getIP()
+    {
+        return agent.getHost();
+    }
+
     public static String uuidStr(UUID uuid)
     {
         return uuid.toString().replace("-", "").toUpperCase();
@@ -348,6 +356,10 @@ public class ZreInterface
         protected String getIdentity()
         {
             return identity;
+        }
+        protected String getHost()
+        {
+            return host;
         }
 
         //  Find or create peer via its UUID string
